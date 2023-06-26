@@ -4,7 +4,7 @@ import React from 'react';
 
 import './App.css';
 
-import Example_component from './components/Example_Component';
+import Portfolio from './components/Portfolio';
 
 // import EXMAPLE_COMPONENT_1 from './components/EXMAPLE_COMPONENT_1'; 4*--  This are where all your components should reside
 // Add code to import the other components here under
@@ -18,7 +18,7 @@ const App = () => {
       <AppProvider>
           <div className='container'>
               {/* This is where you will be structuring the HTML and CSS. Within JS. In the form of components! 5*-----  */} 
-              <Example_component />
+              <Portfolio />
           </div>    
       </AppProvider>
   );
