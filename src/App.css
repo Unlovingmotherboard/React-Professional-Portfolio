@@ -1,23 +1,51 @@
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.themeButton {
+        background-color: blue;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 1rem;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.themeButton-enter {
+  transform: scale(1);
+  transition: transform 2000ms ease;
 }
 
+.themeButton-enter-active {
+  transform: scale(100);
+}
 
-.Theme_Button {
-    height: fit-content;
-    width: fit-content;
-    padding: 1rem;
-    background-color: antiquewhite;
+.themeButton-exit {
+  transform: scale(1);
+  transition: transform 1000ms ease;
+}
+
+/* .themeButton-exit-active {
+    transform: scale(1);
+} */
+
+/* .themeButton-exit-done {
+  transform: scale(1);
+} */
+
+
+
+
+.proThemeCSS {
+  background-color: beige;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.casualThemeCSS {
+  background-color: tan;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
 }
