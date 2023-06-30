@@ -1,39 +1,40 @@
-.themeButton {
-        background-color: blue;
+body {
+  background-color: #fffced;
+}
+.themeTransitionDiv {
+        background-color: #997a8d;
         width: 3rem;
         height: 3rem;
-        border-radius: 50%;
+        border-radius: 50% 50% 53% 47% / 64% 50% 50% 36%;
         position: absolute;
-        bottom: 0;
+        top: 0;
         right: 0;
-        margin: 1rem;
+        margin: 2rem;
+        z-index: 2;
+        /* box-shadow: 0 0 20px 15px #fff, 0 0 25px 15px #f0f; */
 }
 
-.themeButton-enter {
+.themeTransitionDiv-enter {
   transform: scale(1);
   transition: transform 2000ms ease;
 }
-
-.themeButton-enter-active {
+.themeTransitionDiv-enter-active {
   transform: scale(100);
 }
 
-.themeButton-exit {
+.themeTransitionDiv-enter-done {
+  opacity: 1;
+}
+.themeTransitionDiv-exit {
   transform: scale(1);
   transition: transform 1000ms ease;
 }
 
-/* End of themeButton Nav thingy complete. */
 
 
-
-/* Start of proTheme animations/classes */
 .proThemeCSS {
-  background-color: beige;
   border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
-  margin: 1rem;
+  margin: 3rem;
   opacity: 0;
 }
 
@@ -44,20 +45,66 @@
 .proThemeCSSAni-enter-active {
   opacity: 1;
 }
-.proThemeCSSAni-enter-done{
+.proThemeCSSAni-enter-done {
   opacity: 1;
 }
 .proThemeCSSAni-exit {
-  opacity: 0;
-  transition: 3000ms ease-out;
+  opacity: 1;
+  transition: 1500ms ease-out;
 }
 .proThemeCSSAni-exit-active {
   opacity: 0;
 }
-/* End of proTheme animations/classes */
+
+.proThemeCSSAni-exit-done {
+  opacity: 0;
+}
 
 
-/* Start of casualTheme animations/classes */
+
+.proSummary {
+  background-color: #cc6666;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%   ;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100%;
+}
+
+.proLinksDiv {
+  background-color: #817b69;
+  border-radius: 75% 25% 50% 50% / 50% 25% 50% 50% ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  animation: orbit 30s infinite linear;
+}
+
+.githubLogo {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.linkedInLogo {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(25px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(25px) rotate(-360deg);
+  }
+}
+
+
+
+
 .casualThemeCSS {
   background-color: tan;
   border-radius: 50%;
@@ -84,4 +131,3 @@
 .casualThemeCSSAni-exit-active {
   opacity: 0;
 }
-/* End of casualTheme animations/classes */
