@@ -23,29 +23,65 @@
   transition: transform 1000ms ease;
 }
 
-/* .themeButton-exit-active {
-    transform: scale(1);
-} */
-
-/* .themeButton-exit-done {
-  transform: scale(1);
-} */
+/* End of themeButton Nav thingy complete. */
 
 
 
-
+/* Start of proTheme animations/classes */
 .proThemeCSS {
   background-color: beige;
   border-radius: 50%;
   width: 5rem;
   height: 5rem;
   margin: 1rem;
+  opacity: 0;
 }
 
+.proThemeCSSAni-enter {
+  opacity: 0;
+  transition: 1500ms ease-in;
+}
+.proThemeCSSAni-enter-active {
+  opacity: 1;
+}
+.proThemeCSSAni-enter-done{
+  opacity: 1;
+}
+.proThemeCSSAni-exit {
+  opacity: 0;
+  transition: 3000ms ease-out;
+}
+.proThemeCSSAni-exit-active {
+  opacity: 0;
+}
+/* End of proTheme animations/classes */
+
+
+/* Start of casualTheme animations/classes */
 .casualThemeCSS {
   background-color: tan;
   border-radius: 50%;
   width: 10rem;
   height: 10rem;
   margin: 1rem;
+  opacity: 0;
 }
+
+.casualThemeCSSAni-enter {
+  opacity: 0;
+  transition: 1500ms ease-in;
+}
+.casualThemeCSSAni-enter-active {
+  opacity: 1;
+}
+.casualThemeCSSAni-enter-done{
+  opacity: 1;
+}
+.casualThemeCSSAni-exit {
+  opacity: 0;
+  transition: 1500ms ease-out;
+}
+.casualThemeCSSAni-exit-active {
+  opacity: 0;
+}
+/* End of casualTheme animations/classes */
