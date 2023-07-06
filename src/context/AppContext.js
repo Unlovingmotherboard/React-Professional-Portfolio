@@ -46,11 +46,15 @@ export const AppContext = createContext();
 export const AppProvider = (props) => { 
     // const [state, dispatch] = useReducer(AppReducer, initialState); 
 
+    const nodeRef = useRef(null);
+
     const [themeTransition, setThemeTransition] = useState(false); 
 
     const [fadeIn, setFadeIn] = useState(false);
 
-    const nodeRef = useRef(null);
+    const [themeState, setThemeState] = useState(true); 
+    //This is the initial starting position for the <div> (plural) when we execute the elliptical equation.
+
 
 
     // 4. Sets up the app state. takes a reducer, and an initial state
@@ -58,6 +62,7 @@ export const AppProvider = (props) => {
         <AppContext.Provider value = { { 
             // dispatch, 
             themeTransition, setThemeTransition,
+            themeState, setThemeState,
             fadeIn, setFadeIn,
             nodeRef,
             } }>

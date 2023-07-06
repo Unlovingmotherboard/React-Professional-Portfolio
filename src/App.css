@@ -1,23 +1,33 @@
 body {
   background-color: #fffced;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
 }
+
 .themeTransitionDiv {
-        background-color: #997a8d;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50% 50% 53% 47% / 64% 50% 50% 36%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 2rem;
-        z-index: 2;
-        /* box-shadow: 0 0 20px 15px #fff, 0 0 25px 15px #f0f; */
+  background-color: #997a8d;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50% 50% 53% 47% / 64% 50% 50% 36%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2rem;
+  z-index: 2;
+  /* box-shadow: 0 0 20px 15px #fff, 0 0 25px 15px #f0f; */
 }
+
+/* Play with transition styles and colors
+    I want to wow the user
+*/
 
 .themeTransitionDiv-enter {
   transform: scale(1);
   transition: transform 2000ms ease;
 }
+
 .themeTransitionDiv-enter-active {
   transform: scale(100);
 }
@@ -25,6 +35,7 @@ body {
 .themeTransitionDiv-enter-done {
   opacity: 1;
 }
+
 .themeTransitionDiv-exit {
   transform: scale(1);
   transition: transform 1000ms ease;
@@ -34,7 +45,7 @@ body {
 
 .proThemeCSS {
   border-radius: 50%;
-  margin: 3rem;
+  margin: 4rem;
   opacity: 0;
 }
 
@@ -42,16 +53,20 @@ body {
   opacity: 0;
   transition: 1500ms ease-in;
 }
+
 .proThemeCSSAni-enter-active {
   opacity: 1;
 }
+
 .proThemeCSSAni-enter-done {
   opacity: 1;
 }
+
 .proThemeCSSAni-exit {
   opacity: 1;
   transition: 1500ms ease-out;
 }
+
 .proThemeCSSAni-exit-active {
   opacity: 0;
 }
@@ -64,15 +79,60 @@ body {
 
 .proSummary {
   background-color: #cc6666;
-  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%   ;
-  width: 100%;
-  height: 100%;
-  padding-bottom: 100%;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  width: 90%;
+  height: 90%;
+  padding: 5%;
 }
+
+.proTitle {
+  background-color: #6695e0;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  width: 50%;
+  height: 50%;
+  padding: 5%;
+}
+
+.proAboutMe {
+  /* box-shadow: 
+  [horizontal offset] 
+  [vertical offset] 
+  [blur radius] 
+  [optional spread radius] 
+  [color]; 
+  */
+
+  /* box-shadow:
+    inset 20px 0 300px #997a8d, inset -20px 0 300px #997a8d,
+    0 0 50px #997a8d, -10px 0 80px #997a8d; */
+
+  background-color: #997a8d;
+  border-radius: 65% 35% 50% 50% / 67% 50% 50% 34%;
+  width: 25%;
+  height: 25%;
+  padding: 5%;
+}
+
+.proProjects {
+  background-color: #b166e0;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  width: 25%;
+  height: 25%;
+  padding: 5%;
+}
+
+.proContactMe {
+  background-color: #e066a9;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  width: 25%;
+  height: 25%;
+  padding: 5%;
+}
+
 
 .proLinksDiv {
   background-color: #817b69;
-  border-radius: 75% 25% 50% 50% / 50% 25% 50% 50% ;
+  border-radius: 75% 25% 50% 50% / 50% 25% 50% 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +157,7 @@ body {
   from {
     transform: rotate(0deg) translateX(25px) rotate(0deg);
   }
+
   to {
     transform: rotate(360deg) translateX(25px) rotate(-360deg);
   }
@@ -118,16 +179,20 @@ body {
   opacity: 0;
   transition: 1500ms ease-in;
 }
+
 .casualThemeCSSAni-enter-active {
   opacity: 1;
 }
-.casualThemeCSSAni-enter-done{
+
+.casualThemeCSSAni-enter-done {
   opacity: 1;
 }
+
 .casualThemeCSSAni-exit {
   opacity: 0;
   transition: 1500ms ease-out;
 }
+
 .casualThemeCSSAni-exit-active {
   opacity: 0;
 }
