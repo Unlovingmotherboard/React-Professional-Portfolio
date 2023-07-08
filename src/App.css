@@ -1,7 +1,7 @@
 body {
-  background-color: #fffced;
+  background-color: black; /*#fffced*/
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: 90%;
+  width: fit-content;
   height: 90%;
   padding: 5%;
 }
@@ -45,7 +45,7 @@ body {
 
 .proThemeCSS {
   border-radius: 50%;
-  margin: 4rem;
+  margin-top: 5rem;
   opacity: 0;
 }
 
@@ -76,13 +76,10 @@ body {
 }
 
 
-
 .proSummary {
   background-color: #cc6666;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: 90%;
-  height: 90%;
-  padding: 5%;
+  width: fit-content;
 }
 
 .proTitle {
@@ -92,6 +89,21 @@ body {
   height: 50%;
   padding: 5%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- AboutMe Component ---*/
 
 .proAboutMe {
   /* box-shadow: 
@@ -107,12 +119,106 @@ body {
     0 0 50px #997a8d, -10px 0 80px #997a8d; */
 
   background-color: #997a8d;
+  position: relative;
   border-radius: 65% 35% 50% 50% / 67% 50% 50% 34%;
   width: 25%;
   height: 25%;
-  padding: 5%;
+  margin: 2rem;
+  padding-top: 5%;
 }
 
+.proAboutMeRevert {
+  background-color: #b166e0;
+  border-radius: 65% 35% 50% 50% / 67% 50% 50% 34%;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  width: 10%;
+  height: 10%;
+  padding: 1%;
+}
+
+.proAboutMe h1 {
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+}
+
+.proAboutMe p {
+  opacity: 0;
+  margin: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.aboutMeAni-enter {
+  width: 90%;
+  height: 90%;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  transition: 1000ms linear;
+}
+/* .aboutMeAni-enter-active {
+  width: 75%;
+  height: 75%;
+
+  We could do something interesting with this
+} */ 
+.aboutMeAni-enter-done {
+  width: 90%;
+  height: 90%;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  transition: 500ms ease-in;
+}
+
+.aboutMeAni-exit {
+  transition: 1000ms ease-out;
+}
+
+.aboutMeAni-enter h1{
+  opacity: 0;
+  font-family: 'Times New Roman', Times, serif;
+  transition: 2000ms ease-in;
+}
+
+.aboutMeAni-enter-done h1{
+  opacity: 0;
+}
+
+.aboutMeAni-enter-done h1{
+  transition: 1000ms ease-out;
+}
+
+.aboutMeAni-enter p{
+  opacity: 1;
+  font-family: 'Times New Roman', Times, serif;
+  transition: 1000ms ease-in;
+}
+
+.aboutMeAni-enter-done p{
+  opacity: 1;
+  font-family: 'Times New Roman', Times, serif;
+  transition: 1000ms ease-in;
+}
+
+.aboutMeAni-exit p{
+  transition: 200ms ease-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Next Component*/
 .proProjects {
   background-color: #b166e0;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
@@ -162,9 +268,6 @@ body {
     transform: rotate(360deg) translateX(25px) rotate(-360deg);
   }
 }
-
-
-
 
 .casualThemeCSS {
   background-color: tan;

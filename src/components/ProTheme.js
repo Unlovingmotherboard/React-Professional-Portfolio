@@ -1,12 +1,14 @@
 import React, { useEffect, useContext } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { AppContext } from '../context/AppContext';
+import AboutMe from './ProThemeComponents/AboutMe';
 import GithubLogo from "./logos/github-mark.png"
 import LinkedinLogo from "./logos/LI-In-Bug.png"
 
 const ProTheme = () => {
     const { fadeIn, setFadeIn } = useContext(AppContext);
-    useEffect(() => { setFadeIn(true) }, [setFadeIn]);
+
+    useEffect(() => { setFadeIn(true) });
 
     return (
         <CSSTransition in={fadeIn} timeout={3000} classNames={'proThemeCSSAni'}>
@@ -16,9 +18,8 @@ const ProTheme = () => {
                     <div className='proTitle'>
                         <h1>Jose M. Hernandez, Full Stack Software Developer</h1>
                     </div>
-                    <div className='proAboutMe'>
-                        <p>About Me</p>
-                    </div>
+                    
+                    <AboutMe/>
                 </div>
 
                 <div className='proProjects'>

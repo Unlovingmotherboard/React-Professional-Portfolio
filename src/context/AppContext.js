@@ -43,29 +43,27 @@ export const AppContext = createContext();
 // Accepts the children, which are the nested(wrapped) components
 
 
-export const AppProvider = (props) => { 
+export const AppProvider = (props) => {
     // const [state, dispatch] = useReducer(AppReducer, initialState); 
 
     const nodeRef = useRef(null);
 
-    const [themeTransition, setThemeTransition] = useState(false); 
+    const [themeTransition, setThemeTransition] = useState(false);
 
     const [fadeIn, setFadeIn] = useState(false);
 
-    const [themeState, setThemeState] = useState(true); 
+    const [themeState, setThemeState] = useState(true);
     //This is the initial starting position for the <div> (plural) when we execute the elliptical equation.
-
-
 
     // 4. Sets up the app state. takes a reducer, and an initial state
     return (
-        <AppContext.Provider value = { { 
+        <AppContext.Provider value={{
             // dispatch, 
             themeTransition, setThemeTransition,
             themeState, setThemeState,
             fadeIn, setFadeIn,
             nodeRef,
-            } }>
+        }}>
 
 
             {props.children}
