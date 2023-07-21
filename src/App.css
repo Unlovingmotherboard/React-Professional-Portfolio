@@ -1,9 +1,11 @@
 body {
-  background-color: black; /*#fffced*/
+  background-color: #fffced;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
   width: fit-content;
   height: 90%;
   padding: 5%;
+  font-size: 18px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .themeTransitionDiv {
@@ -25,7 +27,7 @@ body {
 
 .themeTransitionDiv-enter {
   transform: scale(1);
-  transition: transform 2000ms ease;
+  transition: 3000ms ease-in;
 }
 
 .themeTransitionDiv-enter-active {
@@ -38,16 +40,19 @@ body {
 
 .themeTransitionDiv-exit {
   transform: scale(1);
-  transition: transform 1000ms ease;
+  transition: 4000ms ease-in;
+
 }
 
 
 
 .proThemeCSS {
   border-radius: 50%;
-  margin-top: 5rem;
+  margin-top: 10%;
   opacity: 0;
 }
+
+
 
 .proThemeCSSAni-enter {
   opacity: 0;
@@ -76,24 +81,68 @@ body {
 }
 
 
-.proSummary {
-  background-color: #cc6666;
-  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: fit-content;
-}
-
 .proTitle {
-  background-color: #6695e0;
+  background-color: #cc9268;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: 50%;
-  height: 50%;
-  padding: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.proTitleNameDiv {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  word-wrap: break-word;
+  position: relative;
+  animation: orbit 45s linear infinite;
+}
+
+.proTitleH1 {
+ font-style: italic;
+  font-weight: bold;
+  font-size: 45px;
+  color: #f9e9e6;
+  border-radius: 50% 50% 50% 50% / 75% 75% 50% 49%;
+  background-color: #ffbd88;
+  padding: 20%;
+  display: inline-flex;
+
+}
+
+.proTitleFullStackDiv{
+  width: 55%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+  position: relative;
+  animation: orbit2 15s linear infinite;
+}
+
+.proTitleFullStack {
+  font-weight: bold;
+  transform: skew(-15deg);
+  font-size: 45px;
+  color: #f0ead6;
+  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
+  background-color: #f7c58e;
+  padding: 18%;
+  margin-left: 50%;
 }
 
 
 
 
+/*
 
+You should start using code pen to visualize your animations
+See the start, middle, and end of your animation!
+
+
+*/
 
 
 
@@ -106,29 +155,32 @@ body {
 /*--- AboutMe Component ---*/
 
 .proAboutMe {
-  /* box-shadow: 
-  [horizontal offset] 
-  [vertical offset] 
-  [blur radius] 
-  [optional spread radius] 
-  [color]; 
-  */
-
-  /* box-shadow:
-    inset 20px 0 300px #997a8d, inset -20px 0 300px #997a8d,
-    0 0 50px #997a8d, -10px 0 80px #997a8d; */
-
-  background-color: #997a8d;
+  background-color: #e1ab67;
   position: relative;
   border-radius: 65% 35% 50% 50% / 67% 50% 50% 34%;
-  width: 25%;
-  height: 25%;
-  margin: 2rem;
-  padding-top: 5%;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  word-wrap: break-word;
+
+}
+
+.aboutMeParagraph {
+  font-size: 18px;
+  padding-top: 150px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 75px;
+  margin: 10px;
+  max-width: 100%;
+  opacity: 0;
 }
 
 .proAboutMeRevert {
-  background-color: #b166e0;
+  background-color: #817b69;
   border-radius: 65% 35% 50% 50% / 67% 50% 50% 34%;
   position: absolute;
   top: 10%;
@@ -138,80 +190,46 @@ body {
   padding: 1%;
 }
 
-.proAboutMe h1 {
-  opacity: 1;
-  position: absolute;
-  top: 50%;
-  right: 50%;
-}
 
-.proAboutMe p {
-  opacity: 0;
-  margin: 4rem;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-}
-
-.aboutMeAni-enter {
-  width: 90%;
-  height: 90%;
-  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  transition: 1000ms linear;
-}
-/* .aboutMeAni-enter-active {
-  width: 75%;
-  height: 75%;
-
-  We could do something interesting with this
-} */ 
-.aboutMeAni-enter-done {
-  width: 90%;
-  height: 90%;
-  border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  transition: 500ms ease-in;
-}
-
-.aboutMeAni-exit {
-  transition: 1000ms ease-out;
-}
-
-.aboutMeAni-enter h1{
-  opacity: 0;
-  font-family: 'Times New Roman', Times, serif;
+.aboutMeAnimation-active-enter .aboutMeParagraph {
+  display: block;
   transition: 2000ms ease-in;
 }
 
-.aboutMeAni-enter-done h1{
-  opacity: 0;
+.aboutMeAnimation-active-enter .proAboutMe {
+  width: auto;
+  transition: 2000ms ease-in;
+  /*This is where I stopped. 
+  Trying to figure out how to properly display content
+  
+  While looking at the CSSTransition doc 
+  i noticed that i can settimeout for appear,enter,exit
+  */
 }
 
-.aboutMeAni-enter-done h1{
+.aboutMePTag {
+  font-weight: bolder;
+  font-size: 45px;
+  color: #fffff0;
+  position: absolute;
+  top: 40%;
+}
+
+
+/*DON'T TOUCH*/
+.aboutMeAnimation-enter .aboutMePTag {
+  opacity: 0;
   transition: 1000ms ease-out;
 }
 
-.aboutMeAni-enter p{
+.aboutMeAnimation-enter-done .aboutMePTag {
+  opacity: 0;
+}
+
+.aboutMeAnimation-exit .aboutMePTag {
   opacity: 1;
-  font-family: 'Times New Roman', Times, serif;
-  transition: 1000ms ease-in;
+  transition: 3000ms ease-in;
 }
-
-.aboutMeAni-enter-done p{
-  opacity: 1;
-  font-family: 'Times New Roman', Times, serif;
-  transition: 1000ms ease-in;
-}
-
-.aboutMeAni-exit p{
-  transition: 200ms ease-out;
-}
-
-
-
-
-
-
-
-
 
 
 
@@ -220,21 +238,34 @@ body {
 
 /*Next Component*/
 .proProjects {
-  background-color: #b166e0;
+  background-color: #f1c466;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: 25%;
-  height: 25%;
-  padding: 5%;
+  width: fit-content;
+  height: 50%;
+  padding: 20%;
 }
 
 .proContactMe {
-  background-color: #e066a9;
+  background-color: #f7dda3;
   border-radius: 26% 74% 50% 50% / 50% 50% 50% 50%;
-  width: 25%;
-  height: 25%;
-  padding: 5%;
+  width: fit-content;
+  height: 50%;
+  padding: 10%;
 }
 
+.projectsTitle {
+  font-weight: bold;
+  font-size: 45px;
+  padding-right: 10%;
+  color: #fffaf0;
+}
+
+.contactMeTitle {
+  font-weight: bold;
+  font-size: 45px;
+  padding-right: 10%;
+  color: #fdfff5;
+}
 
 .proLinksDiv {
   background-color: #817b69;
@@ -261,19 +292,29 @@ body {
 
 @keyframes orbit {
   from {
-    transform: rotate(0deg) translateX(25px) rotate(0deg);
+    transform: rotate(0deg) translateX(50px) rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg) translateX(25px) rotate(-360deg);
+    transform: rotate(360deg) translateX(50px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit2 {
+  from {
+    transform: rotate(-360deg) translateX(25px) rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg) translateX(25px) rotate(0deg);
   }
 }
 
 .casualThemeCSS {
-  background-color: tan;
+  background-color: red;
   border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
+  width: 65%;
+  height: 65%;
   margin: 1rem;
   opacity: 0;
 }
@@ -281,10 +322,6 @@ body {
 .casualThemeCSSAni-enter {
   opacity: 0;
   transition: 1500ms ease-in;
-}
-
-.casualThemeCSSAni-enter-active {
-  opacity: 1;
 }
 
 .casualThemeCSSAni-enter-done {
