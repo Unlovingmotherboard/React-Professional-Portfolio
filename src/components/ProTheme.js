@@ -14,22 +14,31 @@ const ProTheme = () => {
         <CSSTransition in={fadeIn} timeout={3000} classNames={'proThemeCSSAni'}>
             <div className='proThemeCSS'>
 
-                <div className='proSummary'>
+                <div>
                     <div className='proTitle'>
-                        <h1>Jose M. Hernandez, Full Stack Software Developer</h1>
+                        <div className='proTitleNameDiv'>
+                            <h1 className='proTitleH1'>Jose M. <br></br> Hernandez</h1>
+                        </div>
+                        <div className='proTitleFullStackDiv'>
+                            <h1 className='proTitleFullStack'>Full Stack <br></br> Software Developer
+                                <div>
+                                    <p className='randomCatFact'>Random Cat Fact!</p>
+                                </div>
+                            </h1>
+                        </div>
                     </div>
-                    
-                    <AboutMe/>
+                    <AboutMe />
                 </div>
+
 
                 <div className='proProjects'>
                     <div>
-                    <p>Projects</p> 
+                        <p className='projectsTitle'>Projects</p>
                     </div>
                 </div>
 
                 <div className='proContactMe'>
-                    <p>Contact Me</p>
+                    <p className='contactMeTitle'>Contact Me</p>
                 </div>
 
                 <div className='proLinksDiv'>

@@ -17,10 +17,8 @@ const Portfolio = () => {
 
     return (
         <div>
-            <CSSTransition in={themeTransition} timeout={3000} classNames="themeTransitionDiv">
+            <CSSTransition in={themeTransition} timeout={{enter: 3000, exit:4000}} classNames="themeTransitionDiv">
                 <div ref={nodeRef} className='themeTransitionDiv' onClick={() => { handleThemeSwitch(); }} />
-
-
             </CSSTransition>
             {activeTheme === 'proTheme' ? <ProTheme /> : <CasualTheme />}
         </div>
